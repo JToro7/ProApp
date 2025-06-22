@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - ProApp</title>
+    <meta name="description" content="Crea tu cuenta gratuita en ProApp y comienza a transformar tu negocio hoy mismo.">
+    <link rel="stylesheet" href="/Estilos/styles.css">
+</head>
+<body>
+    <!-- Skip links para accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <a href="#nav-menu" class="skip-link">Saltar a navegación</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header-content">
+            <a href="index.html" class="logo" aria-label="ProApp - Ir a página principal">
+                <div class="logo-icon" aria-hidden="true">P</div>
+                <span>ProApp</span>
+            </a>
+
+            <nav role="navigation" aria-label="Navegación principal">
+                <button 
+                    class="mobile-menu-toggle" 
+                    type="button"
+                    aria-controls="nav-menu"
+                    aria-expanded="false"
+                    onclick="toggleMobileMenu()"
+                >
+                    <span class="sr-only">Abrir menú de navegación</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="caracteristicas.html" class="nav-link">Características</a></li>
+                    <li><a href="precios.html" class="nav-link">Precios</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                    <li><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
+                    <li><a href="registro.html" class="btn btn-primary" aria-current="page">Prueba Gratis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main" role="main">
+        <section class="section" aria-labelledby="register-title">
+            <div class="container">
+                <div style="max-width: 500px; margin: 0 auto;">
+                    <h1 id="register-title" class="h1 text-center">
+                        Crear Cuenta Gratuita
+                    </h1>
+                    <p class="lead text-center">
+                        Comienza tu prueba gratuita de 14 días. No se requiere tarjeta de crédito.
+                    </p>
+
+                    <div class="card">
+                        <form id="register-form" novalidate aria-describedby="register-form-description">
+                            <p id="register-form-description" class="form-help mb-8">
+                                Completa la información para crear tu cuenta empresarial
+                            </p>
+
+                            <div class="form-group">
+                                <label for="register-name" class="form-label required">Nombre completo</label>
+                                <input 
+                                    type="text" 
+                                    id="register-name" 
+                                    name="name" 
+                                    class="form-input" 
+                                    required
+                                    autocomplete="name"
+                                    aria-describedby="register-name-error"
+                                >
+                                <div id="register-name-error" class="form-error" role="alert" style="display: none;">
+                                    El nombre debe tener al menos 2 caracteres
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="register-email" class="form-label required">Email empresarial</label>
+                                <input 
+                                    type="email" 
+                                    id="register-email" 
+                                    name="email" 
+                                    class="form-input" 
+                                    required
+                                    autocomplete="email"
+                                    aria-describedby="register-email-help register-email-error"
+                                >
+                                <div id="register-email-help" class="form-help">
+                                    Utiliza tu email empresarial para mejores características
+                                </div>
+                                <div id="register-email-error" class="form-error" role="alert" style="display: none;">
+                                    Por favor ingresa un email válido
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="register-company" class="form-label required">Nombre de la empresa</label>
+                                <input 
+                                    type="text" 
+                                    id="register-company" 
+                                    name="company" 
+                                    class="form-input" 
+                                    required
+                                    autocomplete="organization"
+                                    aria-describedby="register-company-error"
+                                >
+                                <div id="register-company-error" class="form-error" role="alert" style="display: none;">
+                                    Por favor ingresa el nombre de tu empresa
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="register-password" class="form-label required">Contraseña</label>
+                                <input 
+                                    type="password" 
+                                    id="register-password" 
+                                    name="password" 
+                                    class="form-input" 
+                                    required
+                                    autocomplete="new-password"
+                                    aria-describedby="register-password-help register-password-error"
+                                >
+                                <div id="register-password-help" class="form-help">
+                                    Mínimo 8 caracteres, incluye mayúsculas, minúsculas y números
+                                </div>
+                                <div id="register-password-error" class="form-error" role="alert" style="display: none;">
+                                    La contraseña no cumple con los requisitos de seguridad
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="register-phone" class="form-label">Teléfono (opcional)</label>
+                                <input 
+                                    type="tel" 
+                                    id="register-phone" 
+                                    name="phone" 
+                                    class="form-input"
+                                    autocomplete="tel"
+                                    aria-describedby="register-phone-help"
+                                >
+                                <div id="register-phone-help" class="form-help">
+                                    Para recibir notificaciones importantes
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div style="display: flex; align-items: flex-start; gap: var(--space-3);">
+                                    <input 
+                                        type="checkbox" 
+                                        id="register-terms" 
+                                        name="terms" 
+                                        required
+                                        style="margin-top: 4px; min-width: 16px;"
+                                        aria-describedby="register-terms-error"
+                                    >
+                                    <label for="register-terms" class="form-label" style="margin-bottom: 0; font-weight: 400;">
+                                        Acepto los <a href="#" style="color: var(--primary-color);">Términos de Servicio</a> 
+                                        y la <a href="#" style="color: var(--primary-color);">Política de Privacidad</a>
+                                    </label>
+                                </div>
+                                <div id="register-terms-error" class="form-error" role="alert" style="display: none;">
+                                    Debes aceptar los términos para continuar
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+                                Crear Cuenta Gratuita
+                            </button>
+
+                            <div class="loading" id="register-loading" aria-live="polite">
+                                <div class="spinner" role="status" aria-label="Creando tu cuenta"></div>
+                                <p>Creando tu cuenta...</p>
+                            </div>
+
+                            <div id="register-success" class="form-success" role="alert" style="display: none; text-align: center; margin-top: var(--space-4);">
+                                ¡Cuenta creada exitosamente! Redirigiendo al dashboard...
+                            </div>
+
+                            <p class="text-center" style="margin-top: var(--space-6); color: var(--text-muted);">
+                                ¿Ya tienes cuenta? 
+                                <a href="login.html" style="color: var(--primary-color); font-weight: 600;">
+                                    Iniciar Sesión
+                                </a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>ProApp</h4>
+                    <p style="color: #d1d5db;">
+                        La plataforma empresarial que impulsa el crecimiento de más de 10,000 empresas en todo el mundo.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4>Producto</h4>
+                    <ul class="footer-links">
+                        <li><a href="caracteristicas.html">Características</a></li>
+                        <li><a href="precios.html">Precios</a></li>
+                        <li><a href="#">Integraciones</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#">Carreras</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Prensa</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Soporte</h4>
+                    <ul class="footer-links">
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="#">Centro de Ayuda</a></li>
+                        <li><a href="#">Documentación</a></li>
+                        <li><a href="#">Estado del Servicio</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ProApp. Todos los derechos reservados. Desarrollado siguiendo estándares WCAG 2.1 AA.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/Scripts/main.js"></script>
+</body>
+</html>

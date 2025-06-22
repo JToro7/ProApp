@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - ProApp</title>
+    <meta name="description" content="Accede a tu cuenta de ProApp y gestiona tu negocio desde cualquier lugar.">
+    <link rel="stylesheet" href="/Estilos/styles.css">
+</head>
+<body>
+    <!-- Skip links para accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <a href="#nav-menu" class="skip-link">Saltar a navegación</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header-content">
+            <a href="index.html" class="logo" aria-label="ProApp - Ir a página principal">
+                <div class="logo-icon" aria-hidden="true">P</div>
+                <span>ProApp</span>
+            </a>
+
+            <nav role="navigation" aria-label="Navegación principal">
+                <button 
+                    class="mobile-menu-toggle" 
+                    type="button"
+                    aria-controls="nav-menu"
+                    aria-expanded="false"
+                    onclick="toggleMobileMenu()"
+                >
+                    <span class="sr-only">Abrir menú de navegación</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="caracteristicas.html" class="nav-link">Características</a></li>
+                    <li><a href="precios.html" class="nav-link">Precios</a></li>
+                    <li><a href="contacto.html" class="nav-link">contacto</a></li>
+                    <li><a href="login.html" class="nav-link" aria-current="page">Iniciar Sesión</a></li>
+                    <li><a href="registro.html" class="btn btn-primary">Prueba Gratis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main" role="main">
+        <section class="section" aria-labelledby="login-title">
+            <div class="container">
+                <div style="max-width: 400px; margin: 0 auto;">
+                    <h1 id="login-title" class="h1 text-center">
+                        Iniciar Sesión
+                    </h1>
+                    <p class="lead text-center">
+                        Accede a tu cuenta empresarial
+                    </p>
+
+                    <div class="card">
+                        <form id="login-form" novalidate>
+                            <div class="form-group">
+                                <label for="login-email" class="form-label required">Email</label>
+                                <input 
+                                    type="email" 
+                                    id="login-email" 
+                                    name="email" 
+                                    class="form-input" 
+                                    required
+                                    autocomplete="email"
+                                    aria-describedby="login-email-error"
+                                    placeholder="usuario@empresa.com"
+                                >
+                                <div id="login-email-error" class="form-error" role="alert" style="display: none;">
+                                    Por favor ingresa un email válido
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="login-password" class="form-label required">Contraseña</label>
+                                <input 
+                                    type="password" 
+                                    id="login-password" 
+                                    name="password" 
+                                    class="form-input" 
+                                    required
+                                    autocomplete="current-password"
+                                    aria-describedby="login-password-error"
+                                >
+                                <div id="login-password-error" class="form-error" role="alert" style="display: none;">
+                                    Por favor ingresa tu contraseña
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div style="display: flex; align-items: center; justify-content: space-between;">
+                                    <div style="display: flex; align-items: center; gap: var(--space-2);">
+                                        <input type="checkbox" id="login-remember" name="remember">
+                                        <label for="login-remember" style="margin: 0; font-weight: 400;">
+                                            Recordarme
+                                        </label>
+                                    </div>
+                                    <a href="#" style="color: var(--primary-color); font-size: var(--font-size-sm); text-decoration: none;">
+                                        ¿Olvidaste tu contraseña?
+                                    </a>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+                                Iniciar Sesión
+                            </button>
+
+                            <div class="loading" id="login-loading" aria-live="polite">
+                                <div class="spinner" role="status" aria-label="Iniciando sesión"></div>
+                                <p>Verificando credenciales...</p>
+                            </div>
+
+                            <div id="login-error" class="form-error" role="alert" style="display: none; text-align: center; margin-top: var(--space-4);">
+                                Email o contraseña incorrectos. Prueba con: <strong>demo@proapp.com</strong> / <strong>Demo123456</strong>
+                            </div>
+
+                            <p class="text-center" style="margin-top: var(--space-6); color: var(--text-muted);">
+                                ¿No tienes cuenta? 
+                                <a href="registro.html" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">
+                                    Crear Cuenta Gratuita
+                                </a>
+                            </p>
+                        </form>
+                    </div>
+
+                    <!-- Demo credentials info -->
+                    <div class="card" style="margin-top: var(--space-6); background: var(--bg-secondary); border-color: var(--warning-color);">
+                        <h3 style="color: var(--warning-color); margin-bottom: var(--space-3);">🚀 Demo</h3>
+                        <p style="margin-bottom: var(--space-3); font-size: var(--font-size-sm);">
+                            Prueba la aplicación con estas credenciales de demostración:
+                        </p>
+                        <div style="background: var(--bg-primary); padding: var(--space-3); border-radius: 6px; font-family: monospace;">
+                            <strong>Email:</strong> demo@proapp.com<br>
+                            <strong>Contraseña:</strong> Demo123456
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>ProApp</h4>
+                    <p style="color: #d1d5db;">
+                        La plataforma empresarial que impulsa el crecimiento de más de 10,000 empresas en todo el mundo.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4>Producto</h4>
+                    <ul class="footer-links">
+                        <li><a href="caracteristicas.html">Características</a></li>
+                        <li><a href="precios.html">Precios</a></li>
+                        <li><a href="#">Integraciones</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#">Carreras</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Prensa</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Soporte</h4>
+                    <ul class="footer-links">
+                        <li><a href="contacto.html">contacto</a></li>
+                        <li><a href="#">Centro de Ayuda</a></li>
+                        <li><a href="#">Documentación</a></li>
+                        <li><a href="#">Estado del Servicio</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ProApp. Todos los derechos reservados. Desarrollado siguiendo estándares WCAG 2.1 AA.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/Scripts/main.js"></script>
+</body>
+</html>

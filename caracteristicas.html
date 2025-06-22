@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Características - ProApp</title>
+    <meta name="description" content="Descubre todas las características y funcionalidades poderosas que ProApp ofrece para tu negocio.">
+    <link rel="stylesheet" href="/Estilos/styles.css">
+</head>
+<body>
+    <!-- Skip links para accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <a href="#nav-menu" class="skip-link">Saltar a navegación</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header-content">
+            <a href="index.html" class="logo" aria-label="ProApp - Ir a página principal">
+                <div class="logo-icon" aria-hidden="true">P</div>
+                <span>ProApp</span>
+            </a>
+
+            <nav role="navigation" aria-label="Navegación principal">
+                <button 
+                    class="mobile-menu-toggle" 
+                    type="button"
+                    aria-controls="nav-menu"
+                    aria-expanded="false"
+                    onclick="toggleMobileMenu()"
+                >
+                    <span class="sr-only">Abrir menú de navegación</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="caracteristicas.html" class="nav-link" aria-current="page">Características</a></li>
+                    <li><a href="precios.html" class="nav-link">Precios</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                    <li><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
+                    <li><a href="registro.html" class="btn btn-primary">Prueba Gratis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main" role="main">
+        <section class="section" aria-labelledby="features-main-title">
+            <div class="container">
+                <h1 id="features-main-title" class="h1 text-center">
+                    Características Poderosas para Tu Negocio
+                </h1>
+                <p class="lead text-center">
+                    Descubre todas las herramientas que ProApp pone a tu disposición para transformar y hacer crecer tu empresa
+                </p>
+
+                <div class="card-grid">
+                    <article class="card">
+                        <div class="feature-icon" aria-hidden="true">📈</div>
+                        <h3 class="h3">Dashboard Ejecutivo</h3>
+                        <p>Visualiza el estado de tu negocio con métricas clave, gráficos interactivos y alertas personalizables en tiempo real.</p>
+                        <ul class="feature-list">
+                            <li>KPIs personalizables y métricas en tiempo real</li>
+                            <li>Reportes automáticos y exportación de datos</li>
+                            <li>Alertas inteligentes y notificaciones</li>
+                            <li>Dashboards por departamento y rol</li>
+                            <li>Análisis predictivo y tendencias</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <div class="feature-icon" aria-hidden="true">👥</div>
+                        <h3 class="h3">CRM Integrado</h3>
+                        <p>Gestiona todo el ciclo de vida del cliente desde la prospección hasta la fidelización con herramientas avanzadas de CRM.</p>
+                        <ul class="feature-list">
+                            <li>Pipeline de ventas visual y personalizable</li>
+                            <li>Automatización de seguimiento y nurturing</li>
+                            <li>Historial completo de interacciones</li>
+                            <li>Segmentación avanzada de clientes</li>
+                            <li>Scoring de leads automático</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <div class="feature-icon" aria-hidden="true">📋</div>
+                        <h3 class="h3">Gestión de Proyectos</h3>
+                        <p>Organiza y supervisa proyectos con metodologías ágiles, asignación de recursos y seguimiento de progreso en tiempo real.</p>
+                        <ul class="feature-list">
+                            <li>Tableros Kanban y metodologías ágiles</li>
+                            <li>Cronogramas de Gantt interactivos</li>
+                            <li>Asignación inteligente de tareas</li>
+                            <li>Colaboración en tiempo real</li>
+                            <li>Gestión de recursos y presupuestos</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <div class="feature-icon" aria-hidden="true">💰</div>
+                        <h3 class="h3">Facturación y Finanzas</h3>
+                        <p>Automatiza la facturación, gestiona pagos y mantén control financiero completo con herramientas de contabilidad integradas.</p>
+                        <ul class="feature-list">
+                            <li>Facturación automática y recurrente</li>
+                            <li>Seguimiento de pagos y cobranzas</li>
+                            <li>Reportes financieros detallados</li>
+                            <li>Integración bancaria y conciliación</li>
+                            <li>Control de gastos y presupuestos</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <div class="feature-icon" aria-hidden="true">📧</div>
+                        <h3 class="h3">Marketing Automation</h3>
+                        <p>Crea campañas automatizadas de email marketing, SMS y redes sociales para el nurturing efectivo de leads y clientes.</p>
+                        <ul class="feature-list">
+                            <li>Email campaigns con templates profesionales</li>
+                            <li>Lead scoring y segmentación automática</li>
+                            <li>A/B testing y optimización</li>
+                            <li>Landing pages y formularios</li>
+                            <li>Integración con redes sociales</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <div class="feature-icon" aria-hidden="true">🔄</div>
+                        <h3 class="h3">Integraciones API</h3>
+                        <p>Conecta ProApp con tus herramientas favoritas a través de más de 500 integraciones predefinidas y API completa.</p>
+                        <ul class="feature-list">
+                            <li>Slack, Microsoft Teams, Zoom</li>
+                            <li>Google Workspace y Office 365</li>
+                            <li>Stripe, PayPal, sistemas de pago</li>
+                            <li>API REST completa y webhooks</li>
+                            <li>Zapier y automatizaciones</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <div class="feature-icon" aria-hidden="true">🔒</div>
+                        <h3 class="h3">Seguridad Empresarial</h3>
+                        <p>Protección de nivel empresarial con encriptación end-to-end, auditorías de seguridad y cumplimiento normativo.</p>
+                        <ul class="feature-list">
+                            <li>Encriptación AES-256 end-to-end</li>
+                            <li>Autenticación de dos factores (2FA)</li>
+                            <li>Single Sign-On (SSO) empresarial</li>
+                            <li>Auditorías de seguridad y logs</li>
+                            <li>Cumplimiento GDPR y normativas</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <div class="feature-icon" aria-hidden="true">📱</div>
+                        <h3 class="h3">Apps Móviles Nativas</h3>
+                        <p>Accede a tu negocio desde cualquier lugar con aplicaciones móviles nativas para iOS y Android completamente funcionales.</p>
+                        <ul class="feature-list">
+                            <li>Apps nativas para iOS y Android</li>
+                            <li>Sincronización offline y online</li>
+                            <li>Notificaciones push personalizadas</li>
+                            <li>Funcionalidad completa móvil</li>
+                            <li>Modo offline con sincronización</li>
+                        </ul>
+                    </article>
+
+                    <article class="card">
+                        <div class="feature-icon" aria-hidden="true">🤖</div>
+                        <h3 class="h3">Inteligencia Artificial</h3>
+                        <p>Aprovecha el poder de la IA para automatizar procesos, obtener insights y tomar decisiones más inteligentes para tu negocio.</p>
+                        <ul class="feature-list">
+                            <li>Análisis predictivo de ventas</li>
+                            <li>Chatbots inteligentes para soporte</li>
+                            <li>Recomendaciones automáticas</li>
+                            <li>Detección de anomalías</li>
+                            <li>Procesamiento de lenguaje natural</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <!-- Detailed Features Section -->
+                <div style="margin-top: var(--space-20);">
+                    <h2 class="h2 text-center">Funcionalidades Detalladas</h2>
+                    <p class="lead text-center">
+                        Profundiza en las capacidades específicas de cada módulo
+                    </p>
+
+                    <div style="margin-top: var(--space-12);">
+                        <!-- Analytics Detail -->
+                        <div class="card" style="margin-bottom: var(--space-8);">
+                            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: var(--space-8); align-items: center;">
+                                <div>
+                                    <div class="feature-icon" style="margin: 0 0 var(--space-4) 0;" aria-hidden="true">📊</div>
+                                    <h3 class="h3">Analytics Profundo</h3>
+                                    <p style="margin-bottom: var(--space-4);">
+                                        Más que simples métricas, ProApp te ofrece intelligence empresarial completo con machine learning integrado.
+                                    </p>
+                                    <ul class="feature-list">
+                                        <li>Predicciones de ventas con 94% de precisión</li>
+                                        <li>Análisis de cohortes de clientes</li>
+                                        <li>Forecasting automático de demanda</li>
+                                        <li>ROI por canal de marketing</li>
+                                    </ul>
+                                </div>
+                                <div style="background: var(--bg-secondary); padding: var(--space-6); border-radius: 8px; text-align: center;">
+                                    <div style="color: var(--text-muted);">📈 Dashboard Preview</div>
+                                    <div style="margin-top: var(--space-4); font-size: var(--font-size-sm); color: var(--text-secondary);">
+                                        Visualización interactiva de datos en tiempo real con más de 50 tipos de gráficos disponibles
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CRM Detail -->
+                        <div class="card" style="margin-bottom: var(--space-8);">
+                            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--space-8); align-items: center;">
+                                <div style="background: var(--bg-secondary); padding: var(--space-6); border-radius: 8px; text-align: center;">
+                                    <div style="color: var(--text-muted);">👥 CRM Interface</div>
+                                    <div style="margin-top: var(--space-4); font-size: var(--font-size-sm); color: var(--text-secondary);">
+                                        Pipeline visual con drag & drop, automatización de follow-ups y scoring inteligente de leads
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="feature-icon" style="margin: 0 0 var(--space-4) 0;" aria-hidden="true">👥</div>
+                                    <h3 class="h3">CRM de Nueva Generación</h3>
+                                    <p style="margin-bottom: var(--space-4);">
+                                        No solo gestiones contactos, construye relaciones duraderas con inteligencia artificial integrada.
+                                    </p>
+                                    <ul class="feature-list">
+                                        <li>Predicción de cierre de deals</li>
+                                        <li>Recomendaciones de next best action</li>
+                                        <li>Integración con social media</li>
+                                        <li>Autodetección de nuevas oportunidades</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Security Detail -->
+                        <div class="card">
+                            <div style="text-align: center; margin-bottom: var(--space-6);">
+                                <div class="feature-icon" style="margin: 0 auto var(--space-4);" aria-hidden="true">🔒</div>
+                                <h3 class="h3">Seguridad de Nivel Bancario</h3>
+                                <p>
+                                    Tus datos están protegidos con los mismos estándares que usan los bancos más grandes del mundo.
+                                </p>
+                            </div>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-6);">
+                                <div style="text-align: center;">
+                                    <h4 style="font-weight: 600; margin-bottom: var(--space-2);">🛡️ Encriptación</h4>
+                                    <p style="font-size: var(--font-size-sm); color: var(--text-secondary);">
+                                        AES-256 en reposo y TLS 1.3 en tránsito
+                                    </p>
+                                </div>
+                                <div style="text-align: center;">
+                                    <h4 style="font-weight: 600; margin-bottom: var(--space-2);">🏆 Certificaciones</h4>
+                                    <p style="font-size: var(--font-size-sm); color: var(--text-secondary);">
+                                        SOC 2 Type II, ISO 27001, GDPR compliant
+                                    </p>
+                                </div>
+                                <div style="text-align: center;">
+                                    <h4 style="font-weight: 600; margin-bottom: var(--space-2);">⚡ Monitoreo</h4>
+                                    <p style="font-size: var(--font-size-sm); color: var(--text-secondary);">
+                                        Detección de amenazas 24/7 con AI
+                                    </p>
+                                </div>
+                                <div style="text-align: center;">
+                                    <h4 style="font-weight: 600; margin-bottom: var(--space-2);">🔄 Backup</h4>
+                                    <p style="font-size: var(--font-size-sm); color: var(--text-secondary);">
+                                        Respaldos automáticos cada 15 minutos
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center mt-8" style="margin-top: var(--space-20);">
+                    <h2 class="h2">¿Listo para Transformar tu Negocio?</h2>
+                    <p class="lead">
+                        Comienza tu prueba gratuita de 14 días y descubre cómo ProApp puede impulsar tu empresa
+                    </p>
+                    <div class="flex items-center justify-center gap-4">
+                        <a href="register.html" class="btn btn-primary btn-large">
+                            Comenzar Prueba Gratis
+                        </a>
+                        <a href="contacto.html" class="btn btn-secondary btn-large">
+                            Solicitar Demo Personalizada
+                        </a>
+                    </div>
+                    <p style="color: var(--text-muted); font-size: var(--font-size-sm); margin-top: var(--space-4);">
+                        ¿Tienes preguntas específicas? <a href="contacto.html" style="color: var(--primary-color); text-decoration: none;">Habla con nuestro equipo técnico</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>ProApp</h4>
+                    <p style="color: #d1d5db;">
+                        La plataforma empresarial que impulsa el crecimiento de más de 10,000 empresas en todo el mundo.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4>Producto</h4>
+                    <ul class="footer-links">
+                        <li><a href="features.html">Características</a></li>
+                        <li><a href="precios.html">Precios</a></li>
+                        <li><a href="#">Integraciones</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#">Carreras</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Prensa</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Soporte</h4>
+                    <ul class="footer-links">
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="#">Centro de Ayuda</a></li>
+                        <li><a href="#">Documentación</a></li>
+                        <li><a href="#">Estado del Servicio</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ProApp. Todos los derechos reservados. Desarrollado siguiendo estándares WCAG 2.1 AA.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/Scripts/main.js"></script>
+</body>
+</html>

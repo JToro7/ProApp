@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - ProApp</title>
+    <meta name="description" content="Contáctanos para resolver tus dudas sobre ProApp. Nuestro equipo está aquí para ayudarte.">
+    <link rel="stylesheet" href="/Estilos/styles.css">
+</head>
+<body>
+    <!-- Skip links para accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <a href="#nav-menu" class="skip-link">Saltar a navegación</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header-content">
+            <a href="index.html" class="logo" aria-label="ProApp - Ir a página principal">
+                <div class="logo-icon" aria-hidden="true">P</div>
+                <span>ProApp</span>
+            </a>
+
+            <nav role="navigation" aria-label="Navegación principal">
+                <button 
+                    class="mobile-menu-toggle" 
+                    type="button"
+                    aria-controls="nav-menu"
+                    aria-expanded="false"
+                    onclick="toggleMobileMenu()"
+                >
+                    <span class="sr-only">Abrir menú de navegación</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="caracteristicas.html" class="nav-link">Características</a></li>
+                    <li><a href="precios.html" class="nav-link">Precios</a></li>
+                    <li><a href="contacto.html" class="nav-link" aria-current="page">Contacto</a></li>
+                    <li><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
+                    <li><a href="registro.html" class="btn btn-primary">Prueba Gratis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main" role="main">
+        <section class="section" aria-labelledby="contact-title">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <h1 id="contact-title" class="h1 text-center">
+                        Contáctanos
+                    </h1>
+                    <p class="lead text-center">
+                        ¿Tienes preguntas? Nuestro equipo está aquí para ayudarte a encontrar la mejor solución para tu negocio.
+                    </p>
+
+                    <!-- Contact Methods -->
+                    <div class="contact-methods">
+                        <article class="contact-method card">
+                            <div class="contact-icon" aria-hidden="true">📧</div>
+                            <h3 class="h3">Email</h3>
+                            <p>Respuesta en menos de 24 horas</p>
+                            <a href="mailto:hola@proapp.com" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">
+                                hola@proapp.com
+                            </a>
+                            <p style="font-size: var(--font-size-sm); color: var(--text-muted); margin-top: var(--space-2);">
+                                Para consultas generales y soporte
+                            </p>
+                        </article>
+
+                        <article class="contact-method card">
+                            <div class="contact-icon" aria-hidden="true">📞</div>
+                            <h3 class="h3">Teléfono</h3>
+                            <p>Lunes a Viernes 9AM - 6PM</p>
+                            <a href="tel:+573001234567" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">
+                                +57 300 123 4567
+                            </a>
+                            <p style="font-size: var(--font-size-sm); color: var(--text-muted); margin-top: var(--space-2);">
+                                Zona horaria de Colombia (UTC-5)
+                            </p>
+                        </article>
+
+                        <article class="contact-method card">
+                            <div class="contact-icon" aria-hidden="true">💬</div>
+                            <h3 class="h3">Chat en Vivo</h3>
+                            <p>Soporte inmediato</p>
+                            <button class="btn btn-primary" onclick="startChat()">
+                                Iniciar Chat
+                            </button>
+                            <p style="font-size: var(--font-size-sm); color: var(--text-muted); margin-top: var(--space-2);">
+                                Disponible 24/7 para clientes
+                            </p>
+                        </article>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="card">
+                        <form id="contact-form" novalidate aria-describedby="contact-form-description">
+                            <h2 class="h2">Envíanos un Mensaje</h2>
+                            <p id="contact-form-description" class="form-help mb-8">
+                                Completa el formulario y nos pondremos en contacto contigo en las próximas 24 horas.
+                            </p>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-6);">
+                                <div class="form-group">
+                                    <label for="contact-name" class="form-label required">Nombre completo</label>
+                                    <input 
+                                        type="text" 
+                                        id="contact-name" 
+                                        name="name" 
+                                        class="form-input" 
+                                        required
+                                        autocomplete="name"
+                                        aria-describedby="contact-name-error"
+                                    >
+                                    <div id="contact-name-error" class="form-error" role="alert" style="display: none;">
+                                        Por favor ingresa tu nombre completo
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="contact-email" class="form-label required">Email</label>
+                                    <input 
+                                        type="email" 
+                                        id="contact-email" 
+                                        name="email" 
+                                        class="form-input" 
+                                        required
+                                        autocomplete="email"
+                                        aria-describedby="contact-email-error"
+                                    >
+                                    <div id="contact-email-error" class="form-error" role="alert" style="display: none;">
+                                        Por favor ingresa un email válido
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-company" class="form-label">Empresa</label>
+                                <input 
+                                    type="text" 
+                                    id="contact-company" 
+                                    name="company" 
+                                    class="form-input"
+                                    autocomplete="organization"
+                                    placeholder="Nombre de tu empresa (opcional)"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-subject" class="form-label required">Asunto</label>
+                                <select 
+                                    id="contact-subject" 
+                                    name="subject" 
+                                    class="form-input" 
+                                    required
+                                    aria-describedby="contact-subject-error"
+                                >
+                                    <option value="">Selecciona un asunto</option>
+                                    <option value="sales">Consulta de Ventas</option>
+                                    <option value="support">Soporte Técnico</option>
+                                    <option value="partnership">Alianzas Comerciales</option>
+                                    <option value="billing">Facturación y Pagos</option>
+                                    <option value="feature">Solicitud de Funcionalidad</option>
+                                    <option value="demo">Solicitar Demo</option>
+                                    <option value="other">Otro</option>
+                                </select>
+                                <div id="contact-subject-error" class="form-error" role="alert" style="display: none;">
+                                    Por favor selecciona un asunto
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-message" class="form-label required">Mensaje</label>
+                                <textarea 
+                                    id="contact-message" 
+                                    name="message" 
+                                    class="form-input" 
+                                    rows="5" 
+                                    required
+                                    aria-describedby="contact-message-help contact-message-error"
+                                    placeholder="Describe tu consulta con el mayor detalle posible..."
+                                ></textarea>
+                                <div id="contact-message-help" class="form-help">
+                                    Describe tu consulta con el mayor detalle posible (mínimo 10 caracteres)
+                                </div>
+                                <div id="contact-message-error" class="form-error" role="alert" style="display: none;">
+                                    Por favor ingresa tu mensaje (mínimo 10 caracteres)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div style="display: flex; align-items: flex-start; gap: var(--space-3);">
+                                    <input 
+                                        type="checkbox" 
+                                        id="contact-newsletter" 
+                                        name="newsletter"
+                                        style="margin-top: 4px; min-width: 16px;"
+                                    >
+                                    <label for="contact-newsletter" class="form-label" style="margin-bottom: 0; font-weight: 400;">
+                                        Suscribirme al newsletter para recibir actualizaciones sobre ProApp y tips empresariales
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+                                Enviar Mensaje
+                            </button>
+
+                            <div class="loading" id="contact-loading" aria-live="polite">
+                                <div class="spinner" role="status" aria-label="Enviando mensaje"></div>
+                                <p>Enviando tu mensaje...</p>
+                            </div>
+
+                            <div id="contact-success" class="form-success" role="alert" style="display: none; text-align: center; margin-top: var(--space-4);">
+                                ¡Mensaje enviado exitosamente! Te responderemos en las próximas 24 horas.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Contact Info -->
+        <section class="section-sm" style="background: var(--bg-secondary);" aria-labelledby="additional-info-title">
+            <div class="container">
+                <h2 id="additional-info-title" class="h2 text-center">Información Adicional</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-8); margin-top: var(--space-8);">
+                    <div class="card">
+                        <h3 class="h3">Horarios de Atención</h3>
+                        <ul style="list-style: none;">
+                            <li style="margin-bottom: var(--space-2); display: flex; justify-content: space-between;">
+                                <strong>Lunes - Viernes:</strong> 
+                                <span>9:00 AM - 6:00 PM</span>
+                            </li>
+                            <li style="margin-bottom: var(--space-2); display: flex; justify-content: space-between;">
+                                <strong>Sábados:</strong> 
+                                <span>10:00 AM - 2:00 PM</span>
+                            </li>
+                            <li style="margin-bottom: var(--space-2); display: flex; justify-content: space-between;">
+                                <strong>Domingos:</strong> 
+                                <span style="color: var(--accent-color);">Cerrado</span>
+                            </li>
+                        </ul>
+                        <p style="color: var(--text-muted); font-size: var(--font-size-sm); margin-top: var(--space-4);">
+                            *Horarios en zona horaria de Colombia (UTC-5)
+                        </p>
+                        <p style="color: var(--text-muted); font-size: var(--font-size-sm);">
+                            *Chat en vivo disponible 24/7 para clientes Premium y Enterprise
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="h3">Soporte de Emergencia</h3>
+                        <p>Para clientes Enterprise con problemas críticos</p>
+                        <p style="margin: var(--space-4) 0;">
+                            <strong>Línea 24/7:</strong><br>
+                            <a href="tel:+573009876543" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">
+                                +57 300 987 6543
+                            </a>
+                        </p>
+                        <p style="color: var(--text-muted); font-size: var(--font-size-sm);">
+                            *Solo para incidentes que afecten la operación crítica del negocio
+                        </p>
+                        <div style="margin-top: var(--space-4); padding: var(--space-3); background: var(--bg-secondary); border-radius: 6px;">
+                            <strong style="color: var(--accent-color);">Incidentes críticos incluyen:</strong>
+                            <ul style="margin-top: var(--space-2); font-size: var(--font-size-sm);">
+                                <li>Fallas completas del sistema</li>
+                                <li>Pérdida de acceso a datos críticos</li>
+                                <li>Problemas de seguridad</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="h3">Oficinas</h3>
+                        <address style="font-style: normal;">
+                            <strong>Oficina Principal</strong><br>
+                            Carrera 11 #93-56<br>
+                            Chapinero, Bogotá<br>
+                            Colombia<br>
+                            Código Postal: 110221
+                        </address>
+                        <div style="margin-top: var(--space-4);">
+                            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" 
+                               style="color: var(--primary-color); font-weight: 600; text-decoration: none;">
+                                📍 Ver en Google Maps
+                            </a>
+                        </div>
+                        <div style="margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid var(--border-light);">
+                            <p style="font-size: var(--font-size-sm); color: var(--text-muted);">
+                                <strong>Citas presenciales:</strong> Solo con cita previa. 
+                                <a href="mailto:citas@proapp.com" style="color: var(--primary-color);">Programar cita</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sales Team Contact -->
+        <section class="section-sm" aria-labelledby="sales-team-title">
+            <div class="container">
+                <h2 id="sales-team-title" class="h2 text-center">Equipo de Ventas</h2>
+                <p class="text-center" style="color: var(--text-muted); margin-bottom: var(--space-8);">
+                    Conecta directamente con nuestros especialistas
+                </p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-6);">
+                    <div class="card text-center">
+                        <img src="https://cdn.prod.website-files.com/61055bb1fcd41b98d70305a7/63c0c84644d4cf6986e754ab_Untitled-1.1.png" 
+                             alt="Foto de Mar-IA la IA" style="width: 80px; height: 80px; border-radius: 50%; margin: 0 auto var(--space-4);">
+                        <h4 style="font-weight: 600; margin-bottom: var(--space-1);">Mar-IA</h4>
+                        <p style="color: var(--text-muted); font-size: var(--font-size-sm); margin-bottom: var(--space-3);">
+                            Gerente de ventas - Empresas Medianas
+                        </p>
+                        <p style="font-size: var(--font-size-sm); margin-bottom: var(--space-4);">
+                            IA Especialista en ayudar a empresas de 25-200 empleados a optimizar sus procesos.
+                        </p>
+                        <a href="mailto:mar-ia@proapp.com" class="btn btn-outline" style="margin-right: var(--space-2);">
+                            📧 Email
+                        </a>
+                        <a href="tel:+573001111111" class="btn btn-outline">
+                            📞 Llamar
+                        </a>
+                    </div>
+
+                    <div class="card text-center">
+                        <img src="https://lh3.googleusercontent.com/a-/AOh14GjdboK62kkuqbNKU4MFRXMNHasMzS8UY8Q8dfiNBco=k-s256" 
+                             alt="Foto de James Toro Cantero" style="width: 80px; height: 80px; border-radius: 50%; margin: 0 auto var(--space-4);">
+                        <h4 style="font-weight: 600; margin-bottom: var(--space-1);">James Toro Cantero</h4>
+                        <p style="color: var(--text-muted); font-size: var(--font-size-sm); margin-bottom: var(--space-3);">
+                            Director de Ventas Empresariales
+                        </p>
+                        <p style="font-size: var(--font-size-sm); margin-bottom: var(--space-4);">
+                            Experto en soluciones empresariales para organizaciones de 200+ empleados.
+                        </p>
+                        <a href="mailto:james.toro@proapp.com" class="btn btn-outline" style="margin-right: var(--space-2);">
+                            📧 Email
+                        </a>
+                        <a href="tel:+573002222222" class="btn btn-outline">
+                            📞 Llamar
+                        </a>
+                    </div>
+
+                    <div class="card text-center">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E03AQHxDToEDarGnw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1674229699812?e=2147483647&v=beta&t=q_2DFkNVLzUZyFtVwtmB4cG0evnmSvMf2BsQfAq-nHM" 
+                             alt="Foto de Diana Marcela Toquica" style="width: 80px; height: 80px; border-radius: 50%; margin: 0 auto var(--space-4);">
+                        <h4 style="font-weight: 600; margin-bottom: var(--space-1);">Diana Marcela Toquica</h4>
+                        <p style="color: var(--text-muted); font-size: var(--font-size-sm); margin-bottom: var(--space-3);">
+                            Especialista en Startups y Pymes
+                        </p>
+                        <p style="font-size: var(--font-size-sm); margin-bottom: var(--space-4);">
+                            Ayuda a startups y pequeñas empresas a implementar ProApp desde el día uno.
+                        </p>
+                        <a href="mailto:diana.toquica@proapp.com" class="btn btn-outline" style="margin-right: var(--space-2);">
+                            📧 Email
+                        </a>
+                        <a href="tel:+573003333333" class="btn btn-outline">
+                            📞 Llamar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>ProApp</h4>
+                    <p style="color: #d1d5db;">
+                        La plataforma empresarial que impulsa el crecimiento de más de 10,000 empresas en todo el mundo.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4>Producto</h4>
+                    <ul class="footer-links">
+                        <li><a href="caracteristicas.html">Características</a></li>
+                        <li><a href="precios.html">Precios</a></li>
+                        <li><a href="#">Integraciones</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#">Carreras</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Prensa</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Soporte</h4>
+                    <ul class="footer-links">
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="#">Centro de Ayuda</a></li>
+                        <li><a href="#">Documentación</a></li>
+                        <li><a href="#">Estado del Servicio</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ProApp. Todos los derechos reservados. Desarrollado siguiendo estándares WCAG 2.1 AA.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/Scripts/main.js"></script>
+</body>
+</html>

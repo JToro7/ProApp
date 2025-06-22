@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ProApp</title>
+    <meta name="description" content="Dashboard principal de ProApp - Gestiona tu negocio desde aquí.">
+    <link rel="stylesheet" href="/Estilos/styles.css">
+</head>
+<body>
+    <!-- Skip links para accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <a href="#nav-menu" class="skip-link">Saltar a navegación</a>
+
+    <!-- Header modificado para dashboard -->
+    <header class="header" role="banner">
+        <div class="header-content">
+            <a href="dashboard.html" class="logo" aria-label="ProApp Dashboard">
+                <div class="logo-icon" aria-hidden="true">P</div>
+                <span>ProApp</span>
+            </a>
+
+            <nav role="navigation" aria-label="Navegación del dashboard">
+                <button 
+                    class="mobile-menu-toggle" 
+                    type="button"
+                    aria-controls="nav-menu"
+                    aria-expanded="false"
+                    onclick="toggleMobileMenu()"
+                >
+                    <span class="sr-only">Abrir menú de navegación</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="dashboard.html" class="nav-link" aria-current="page">Dashboard</a></li>
+                    <li><a href="#" class="nav-link">Analytics</a></li>
+                    <li><a href="#" class="nav-link">CRM</a></li>
+                    <li><a href="#" class="nav-link">Proyectos</a></li>
+                    <li><a href="#" class="nav-link">Configuración</a></li>
+                    <li><a href="index.html" class="btn btn-outline">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content del Dashboard -->
+    <main id="main-content" class="main" role="main">
+        <div class="dashboard-header">
+            <div class="container">
+                <h1 class="h2">Bienvenido de vuelta, Usuario Demo</h1>
+                <p style="color: var(--text-muted);">Aquí tienes un resumen de tu negocio hoy, sábado 21 de junio de 2025</p>
+                
+                <nav class="dashboard-nav" role="navigation" aria-label="Navegación del dashboard">
+                    <a href="#" class="dashboard-nav-item" aria-current="page">Resumen</a>
+                    <a href="#" class="dashboard-nav-item">Analytics</a>
+                    <a href="#" class="dashboard-nav-item">CRM</a>
+                    <a href="#" class="dashboard-nav-item">Proyectos</a>
+                    <a href="#" class="dashboard-nav-item">Facturación</a>
+                    <a href="#" class="dashboard-nav-item">Configuración</a>
+                </nav>
+            </div>
+        </div>
+
+        <section class="section-sm" aria-labelledby="dashboard-stats-title">
+            <div class="container">
+                <h2 id="dashboard-stats-title" class="sr-only">Estadísticas del negocio</h2>
+                
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <article class="stat-card" tabindex="0">
+                        <span class="stat-value">$45,231</span>
+                        <div class="stat-label">Ingresos este mes</div>
+                        <div style="font-size: var(--font-size-xs); color: var(--success-color); margin-top: var(--space-2);">
+                            ↗ +12.5% vs mes anterior
+                        </div>
+                    </article>
+                    
+                    <article class="stat-card" tabindex="0">
+                        <span class="stat-value">1,423</span>
+                        <div class="stat-label">Nuevos clientes</div>
+                        <div style="font-size: var(--font-size-xs); color: var(--success-color); margin-top: var(--space-2);">
+                            ↗ +8.3% vs mes anterior
+                        </div>
+                    </article>
+                    
+                    <article class="stat-card" tabindex="0">
+                        <span class="stat-value">89.5%</span>
+                        <div class="stat-label">Satisfacción del cliente</div>
+                        <div style="font-size: var(--font-size-xs); color: var(--success-color); margin-top: var(--space-2);">
+                            ↗ +2.1% vs mes anterior
+                        </div>
+                    </article>
+                    
+                    <article class="stat-card" tabindex="0">
+                        <span class="stat-value">23</span>
+                        <div class="stat-label">Proyectos activos</div>
+                        <div style="font-size: var(--font-size-xs); color: var(--text-muted); margin-top: var(--space-2);">
+                            5 nuevos esta semana
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Content Grid -->
+                <div class="card-grid">
+                    <article class="card">
+                        <h3 class="h3">Actividad Reciente</h3>
+                        <ul style="list-style: none; margin-top: var(--space-4);" role="list">
+                            <li style="margin-bottom: var(--space-3); padding-bottom: var(--space-3); border-bottom: 1px solid var(--border-light);">
+                                <div style="display: flex; align-items: center; gap: var(--space-3);">
+                                    <div style="width: 8px; height: 8px; background: var(--success-color); border-radius: 50%; flex-shrink: 0;"></div>
+                                    <div style="flex: 1;">
+                                        <strong>Nueva venta:</strong> Proyecto ABC Corp - $12,500
+                                        <div style="color: var(--text-muted); font-size: var(--font-size-sm);">Hace 2 horas</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: var(--space-3); padding-bottom: var(--space-3); border-bottom: 1px solid var(--border-light);">
+                                <div style="display: flex; align-items: center; gap: var(--space-3);">
+                                    <div style="width: 8px; height: 8px; background: var(--primary-color); border-radius: 50%; flex-shrink: 0;"></div>
+                                    <div style="flex: 1;">
+                                        <strong>Cliente registrado:</strong> XYZ Solutions
+                                        <div style="color: var(--text-muted); font-size: var(--font-size-sm);">Hace 4 horas</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: var(--space-3); padding-bottom: var(--space-3); border-bottom: 1px solid var(--border-light);">
+                                <div style="display: flex; align-items: center; gap: var(--space-3);">
+                                    <div style="width: 8px; height: 8px; background: var(--warning-color); border-radius: 50%; flex-shrink: 0;"></div>
+                                    <div style="flex: 1;">
+                                        <strong>Proyecto completado:</strong> Rediseño web TechCorp
+                                        <div style="color: var(--text-muted); font-size: var(--font-size-sm);">Ayer</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div style="display: flex; align-items: center; gap: var(--space-3);">
+                                    <div style="width: 8px; height: 8px; background: var(--accent-color); border-radius: 50%; flex-shrink: 0;"></div>
+                                    <div style="flex: 1;">
+                                        <strong>Factura vencida:</strong> Cliente DEF Ltd - $3,200
+                                        <div style="color: var(--text-muted); font-size: var(--font-size-sm);">Hace 2 días</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-outline" style="width: 100%; margin-top: var(--space-4);">
+                            Ver Toda la Actividad
+                        </a>
+                    </article>
+
+                    <article class="card">
+                        <h3 class="h3">Tareas Pendientes</h3>
+                        <ul style="list-style: none; margin-top: var(--space-4);" role="list">
+                            <li style="margin-bottom: var(--space-3);">
+                                <div style="display: flex; align-items: center; gap: var(--space-2);">
+                                    <input type="checkbox" id="task1" style="min-width: 16px;">
+                                    <label for="task1" style="margin: 0; flex: 1;">Revisar propuesta del cliente TechStart</label>
+                                    <span style="background: var(--accent-color); color: white; padding: 2px 6px; border-radius: 3px; font-size: var(--font-size-xs);">Alta</span>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: var(--space-3);">
+                                <div style="display: flex; align-items: center; gap: var(--space-2);">
+                                    <input type="checkbox" id="task2" style="min-width: 16px;">
+                                    <label for="task2" style="margin: 0; flex: 1;">Actualizar base de datos de clientes</label>
+                                    <span style="background: var(--warning-color); color: white; padding: 2px 6px; border-radius: 3px; font-size: var(--font-size-xs);">Media</span>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: var(--space-3);">
+                                <div style="display: flex; align-items: center; gap: var(--space-2);">
+                                    <input type="checkbox" id="task3" checked style="min-width: 16px;">
+                                    <label for="task3" style="margin: 0; flex: 1; text-decoration: line-through; color: var(--text-muted);">Enviar reporte mensual</label>
+                                    <span style="background: var(--success-color); color: white; padding: 2px 6px; border-radius: 3px; font-size: var(--font-size-xs);">Completada</span>
+                                </div>
+                            </li>
+                            <li style="margin-bottom: var(--space-3);">
+                                <div style="display: flex; align-items: center; gap: var(--space-2);">
+                                    <input type="checkbox" id="task4" style="min-width: 16px;">
+                                    <label for="task4" style="margin: 0; flex: 1;">Llamar a cliente ABC Corp para follow-up</label>
+                                    <span style="background: var(--secondary-color); color: white; padding: 2px 6px; border-radius: 3px; font-size: var(--font-size-xs);">Baja</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-outline" style="width: 100%; margin-top: var(--space-4);">
+                            Ver Todas las Tareas
+                        </a>
+                    </article>
+
+                    <article class="card">
+                        <h3 class="h3">Próximas Reuniones</h3>
+                        <ul style="list-style: none; margin-top: var(--space-4);" role="list">
+                            <li style="margin-bottom: var(--space-4); padding: var(--space-3); background: var(--bg-secondary); border-radius: 6px;">
+                                <div style="font-weight: 600; color: var(--primary-color);">Reunión con equipo de desarrollo</div>
+                                <div style="color: var(--text-muted); font-size: var(--font-size-sm); margin: var(--space-1) 0;">
+                                    📅 Hoy, 3:00 PM - 4:00 PM
+                                </div>
+                                <div style="color: var(--text-secondary); font-size: var(--font-size-sm);">
+                                    Revisión de avances del proyecto Q1
+                                </div>
+                            </li>
+                            <li style="margin-bottom: var(--space-4); padding: var(--space-3); border: 1px solid var(--border-light); border-radius: 6px;">
+                                <div style="font-weight: 600;">Presentación a clientes</div>
+                                <div style="color: var(--text-muted); font-size: var(--font-size-sm); margin: var(--space-1) 0;">
+                                    📅 Mañana, 10:00 AM - 11:30 AM
+                                </div>
+                                <div style="color: var(--text-secondary); font-size: var(--font-size-sm);">
+                                    Demo de nuevas funcionalidades
+                                </div>
+                            </li>
+                            <li style="padding: var(--space-3); border: 1px solid var(--border-light); border-radius: 6px;">
+                                <div style="font-weight: 600;">Review semanal con el equipo</div>
+                                <div style="color: var(--text-muted); font-size: var(--font-size-sm); margin: var(--space-1) 0;">
+                                    📅 Lunes, 9:00 AM - 10:00 AM
+                                </div>
+                                <div style="color: var(--text-secondary); font-size: var(--font-size-sm);">
+                                    Planificación de la semana
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-outline" style="width: 100%; margin-top: var(--space-4);">
+                            Ver Calendario Completo
+                        </a>
+                    </article>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="card" style="margin-top: var(--space-8);">
+                    <h3 class="h3">Acciones Rápidas</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-4); margin-top: var(--space-4);">
+                        <button class="btn btn-primary" style="justify-content: flex-start;">
+                            📊 Crear Reporte
+                        </button>
+                        <button class="btn btn-secondary" style="justify-content: flex-start;">
+                            👤 Añadir Cliente
+                        </button>
+                        <button class="btn btn-secondary" style="justify-content: flex-start;">
+                            📋 Nuevo Proyecto
+                        </button>
+                        <button class="btn btn-secondary" style="justify-content: flex-start;">
+                            💰 Crear Factura
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer simplificado para dashboard -->
+    <footer class="footer" role="contentinfo" style="margin-top: var(--space-12); padding: var(--space-8) 0 var(--space-4);">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 ProApp. Dashboard empresarial desarrollado siguiendo estándares WCAG 2.1 AA.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/Scripts/main.js"></script>
+</body>
+</html>

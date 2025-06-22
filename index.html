@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProApp - Soluciones Empresariales</title>
+    <link rel="stylesheet" href="/Estilos/styles.css">
+    <meta name="description" content="ProApp ofrece soluciones empresariales innovadoras para optimizar tu negocio. Prueba gratis hoy.">
+    
+    
+</head>
+<body>
+    <!-- Skip links para accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <a href="#nav-menu" class="skip-link">Saltar a navegación</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header-content">
+            <a href="index.html" class="logo" aria-label="ProApp - Ir a página principal">
+                <div class="logo-icon" aria-hidden="true">P</div>
+                <span>ProApp</span>
+            </a>
+
+            <nav role="navigation" aria-label="Navegación principal">
+                <button 
+                    class="mobile-menu-toggle" 
+                    type="button"
+                    aria-controls="nav-menu"
+                    aria-expanded="false"
+                    onclick="toggleMobileMenu()"
+                >
+                    <span class="sr-only">Abrir menú de navegación</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link" aria-current="page">Inicio</a></li>
+                    <li><a href="caracteristicas.html" class="nav-link">Características</a></li>
+                    <li><a href="precios.html" class="nav-link">Precios</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                    <li><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
+                    <li><a href="registro.html" class="btn btn-primary">Prueba Gratis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main" role="main">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="hero-title" class="h1">
+                        Transforma tu negocio con 
+                        <span style="color: var(--primary-color);">ProApp</span>
+                    </h1>
+                    <p class="lead">
+                        La plataforma empresarial todo-en-uno que necesitas para gestionar, optimizar y hacer crecer tu negocio. Más de 10,000 empresas confían en nosotros.
+                    </p>
+                    <div class="flex items-center justify-center gap-4">
+                        <a href="registro.html" class="btn btn-primary btn-large" 
+                           aria-describedby="cta-description">
+                            Comenzar Prueba Gratis
+                        </a>
+                        <a href="caracteristicas.html" class="btn btn-secondary btn-large">
+                            Ver Demo
+                        </a>
+                    </div>
+                    <p id="cta-description" class="mt-8" style="color: var(--text-muted); font-size: var(--font-size-sm);">
+                        14 días gratis • No se requiere tarjeta de crédito • Configuración en 5 minutos
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Overview -->
+        <section class="section" aria-labelledby="features-title">
+            <div class="container">
+                <h2 id="features-title" class="h2 text-center">
+                    Todo lo que necesitas en una sola plataforma
+                </h2>
+                <p class="lead text-center">
+                    Herramientas integradas que trabajan juntas para impulsar tu éxito empresarial
+                </p>
+
+                <div class="features-grid">
+                    <article class="feature-item">
+                        <div class="feature-icon" aria-hidden="true">📊</div>
+                        <h3 class="h3">Analytics Avanzado</h3>
+                        <p>Obtén insights profundos sobre tu negocio con dashboards interactivos y reportes en tiempo real.</p>
+                    </article>
+
+                    <article class="feature-item">
+                        <div class="feature-icon" aria-hidden="true">🤝</div>
+                        <h3 class="h3">Gestión de Clientes</h3>
+                        <p>CRM completo para gestionar leads, clientes y oportunidades de venta de manera eficiente.</p>
+                    </article>
+
+                    <article class="feature-item">
+                        <div class="feature-icon" aria-hidden="true">⚡</div>
+                        <h3 class="h3">Automatización</h3>
+                        <p>Automatiza procesos repetitivos y libera tiempo para enfocarte en lo que realmente importa.</p>
+                    </article>
+
+                    <article class="feature-item">
+                        <div class="feature-icon" aria-hidden="true">🔒</div>
+                        <h3 class="h3">Seguridad Avanzada</h3>
+                        <p>Protección de nivel empresarial con encriptación end-to-end y auditorías de seguridad.</p>
+                    </article>
+
+                    <article class="feature-item">
+                        <div class="feature-icon" aria-hidden="true">📱</div>
+                        <h3 class="h3">Apps Móviles</h3>
+                        <p>Accede a tu negocio desde cualquier lugar con nuestras apps nativas para iOS y Android.</p>
+                    </article>
+
+                    <article class="feature-item">
+                        <div class="feature-icon" aria-hidden="true">🌐</div>
+                        <h3 class="h3">Integraciones</h3>
+                        <p>Conecta con más de 500 herramientas populares para crear un ecosistema unificado.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof -->
+        <section class="section-sm" style="background: var(--bg-secondary);" aria-labelledby="social-proof-title">
+            <div class="container">
+                <h2 id="social-proof-title" class="sr-only">Empresas que confían en ProApp</h2>
+                <p class="text-center" style="color: var(--text-muted); margin-bottom: var(--space-8);">
+                    Más de 10,000 empresas confían en ProApp
+                </p>
+                <div class="flex items-center justify-center gap-4" style="flex-wrap: wrap;">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjYwIiB5PSIyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZCNzI4MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0Ij5FbXByZXNhIEE8L3RleHQ+Cjwvc3ZnPgo=" 
+                         alt="Logo de Empresa A" style="height: 40px; opacity: 0.6;">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjYwIiB5PSIyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZCNzI4MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0Ij5FbXByZXNhIEI8L3RleHQ+Cjwvc3ZnPgo=" 
+                         alt="Logo de Empresa B" style="height: 40px; opacity: 0.6;">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjYwIiB5PSIyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZCNzI4MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0Ij5FbXByZXNhIEM8L3RleHQ+Cjwvc3ZnPgo=" 
+                         alt="Logo de Empresa C" style="height: 40px; opacity: 0.6;">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjRjNGNEY2Ii8+Cjx0ZXh0IHg9IjYwIiB5PSIyNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzZCNzI4MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0Ij5FbXByZXNhIEQ8L3RleHQ+Cjwvc3ZnPgo=" 
+                         alt="Logo de Empresa D" style="height: 40px; opacity: 0.6;">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>ProApp</h4>
+                    <p style="color: #d1d5db;">
+                        La plataforma empresarial que impulsa el crecimiento de más de 10,000 empresas en todo el mundo.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4>Producto</h4>
+                    <ul class="footer-links">
+                        <li><a href="features.html">Características</a></li>
+                        <li><a href="precios.html">Precios</a></li>
+                        <li><a href="#">Integraciones</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#">Carreras</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Prensa</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Soporte</h4>
+                    <ul class="footer-links">
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="#">Centro de Ayuda</a></li>
+                        <li><a href="#">Documentación</a></li>
+                        <li><a href="#">Estado del Servicio</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ProApp. Todos los derechos reservados. Desarrollado siguiendo estándares WCAG 2.1 AA.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('nav-menu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            const isOpen = menu.classList.contains('active');
+            
+            menu.classList.toggle('active');
+            toggle.setAttribute('aria-expanded', !isOpen);
+            
+            // Cambiar icono
+            const icon = toggle.querySelector('svg');
+            if (!isOpen) {
+                icon.innerHTML = '<path d="M6 18L18 6M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>';
+                toggle.querySelector('.sr-only').textContent = 'Cerrar menú de navegación';
+            } else {
+                icon.innerHTML = '<path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>';
+                toggle.querySelector('.sr-only').textContent = 'Abrir menú de navegación';
+            }
+        }
+
+        // Navegación con teclado
+        document.addEventListener('keydown', function(e) {
+            // Escape key para cerrar mobile menu
+            if (e.key === 'Escape') {
+                const menu = document.getElementById('nav-menu');
+                const toggle = document.querySelector('.mobile-menu-toggle');
+                if (menu && menu.classList.contains('active')) {
+                    toggleMobileMenu();
+                    toggle.focus();
+                }
+            }
+        });
+
+        // Manejo de resize para mobile menu
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                const menu = document.getElementById('nav-menu');
+                const toggle = document.querySelector('.mobile-menu-toggle');
+                if (menu && menu.classList.contains('active')) {
+                    menu.classList.remove('active');
+                    toggle.setAttribute('aria-expanded', 'false');
+                }
+            }
+        });
+    </script>
+    <script src="/Scripts/main.js"></script>
+</body>
+</html>
